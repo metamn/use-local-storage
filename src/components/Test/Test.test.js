@@ -3,6 +3,6 @@ import { render } from "@testing-library/react";
 import Test from "./Test";
 
 it("has a Test component", () => {
-  const { getByText } = render(<Test />);
-  expect(getByText("Test")).toBeInTheDocument();
+  const { container } = render(<Test />);
+  expect(container.firstChild).toHaveClass("Test");
 });
